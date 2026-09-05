@@ -1,0 +1,14 @@
+{
+  "name": "pulselab",
+  "private": true,
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+    "serve": "npx --yes serve src -p 5173"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.7.28",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaches · PulseLab</title>
+  <link rel="stylesheet" href="output.css" />
+</head>
+<body data-page="about" class="bg-base-100 text-base-content">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero min-h-[40vh] bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-black">Coaches, not influencers</h1>
+          <p class="py-6 opacity-80">PulseLab is written by people who still coach in rooms that smell like chalk. We publish what we would give an athlete on a Tuesday night.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-16">
+      <div class="stats stats-vertical lg:stats-horizontal shadow w-full bg-base-200 mb-16">
+        <div class="stat">
+          <div class="stat-title">Articles in the journal</div>
+          <div class="stat-value text-primary">8</div>
+          <div class="stat-desc">Updated through August 2026</div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Training lanes</div>
+          <div class="stat-value">5</div>
+          <div class="stat-desc">Strength to sleep</div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Session length we like</div>
+          <div class="stat-value">45m</div>
+          <div class="stat-desc">Because you have a life</div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-black mb-8">The desk</h2>
+      <div id="coach-grid" class="grid gap-8 md:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

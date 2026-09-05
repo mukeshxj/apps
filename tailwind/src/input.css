@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: forest --default, light;
+}
+
+@plugin "daisyui/theme" {
+  name: "forest";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-primary: oklch(0.82 0.2 132);
+  --color-primary-content: oklch(0.18 0.04 140);
+  --color-secondary: oklch(0.72 0.12 200);
+  --color-accent: oklch(0.78 0.16 70);
+  --color-neutral: oklch(0.22 0.02 160);
+  --color-base-100: oklch(0.16 0.02 160);
+  --color-base-200: oklch(0.2 0.02 160);
+  --color-base-300: oklch(0.26 0.025 160);
+  --color-base-content: oklch(0.93 0.02 140);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.hero-overlay-fit {
+  background: linear-gradient(
+    120deg,
+    oklch(0.14 0.03 150 / 0.88) 0%,
+    oklch(0.2 0.05 140 / 0.55) 50%,
+    oklch(0.16 0.04 160 / 0.82) 100%
+  );
+}
+
+.article-prose p + p {
+  margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background: oklch(0.82 0.2 132) !important;
+  opacity: 0.35;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: oklch(0.82 0.2 132) !important;
+}

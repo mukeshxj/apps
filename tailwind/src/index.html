@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseLab · Fitness journal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="output.css" />
+</head>
+<body data-page="home" class="bg-base-100 text-base-content">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero min-h-[80vh]" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=2000&q=80');">
+      <div class="hero-overlay hero-overlay-fit"></div>
+      <div class="hero-content text-neutral-content text-center">
+        <div class="max-w-3xl">
+          <p class="badge badge-primary mb-4">Strength · Conditioning · Fuel</p>
+          <h1 class="text-5xl md:text-7xl font-black leading-none">Train like it has to last.</h1>
+          <p class="py-6 text-lg md:text-xl opacity-90">PulseLab is a fitness journal for busy people who still want to get strong, run farther, and eat like adults. No gimmicks. Clear plans.</p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="blog.html" class="btn btn-primary btn-lg">Browse articles</a>
+            <a href="about.html" class="btn btn-outline btn-lg">Meet the coaches</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="flex items-end justify-between mb-6">
+        <div>
+          <h2 class="text-3xl font-black">Featured this week</h2>
+          <p class="opacity-70">Swipe through the pieces our editors keep sending to friends.</p>
+        </div>
+        <div class="hidden md:flex gap-2">
+          <button id="featured-prev" class="btn btn-circle btn-ghost" aria-label="Previous">‹</button>
+          <button id="featured-next" class="btn btn-circle btn-ghost" aria-label="Next">›</button>
+        </div>
+      </div>
+      <div id="featured-swiper" class="swiper">
+        <div id="featured-swiper-wrapper" class="swiper-wrapper"></div>
+        <div id="featured-pagination" class="swiper-pagination !relative !mt-6"></div>
+      </div>
+    </section>
+
+    <section class="bg-base-200 py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-black mb-2">Start with a lane</h2>
+        <p class="opacity-70 mb-8">Pick a focus. We will not make you do all of them at once.</p>
+        <div id="programs-swiper" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="blog.html?cat=Strength" class="card bg-base-100 shadow-xl h-full">
+                <div class="card-body">
+                  <h3 class="card-title">Strength</h3>
+                  <p>Compound lifts, home dumbbells, and progress you can measure.</p>
+                  <div class="badge badge-primary">Barbell &amp; dumbbell</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="blog.html?cat=Cardio" class="card bg-base-100 shadow-xl h-full">
+                <div class="card-body">
+                  <h3 class="card-title">Cardio</h3>
+                  <p>Intervals that spare your joints and a 5K plan that stays honest.</p>
+                  <div class="badge badge-secondary">Run &amp; HIIT</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="blog.html?cat=Nutrition" class="card bg-base-100 shadow-xl h-full">
+                <div class="card-body">
+                  <h3 class="card-title">Nutrition</h3>
+                  <p>Protein plates, hydration, and food you will actually cook twice.</p>
+                  <div class="badge badge-accent">Kitchen</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="blog.html?cat=Mobility" class="card bg-base-100 shadow-xl h-full">
+                <div class="card-body">
+                  <h3 class="card-title">Mobility</h3>
+                  <p>Short morning flows so your squat and overhead press keep their range.</p>
+                  <div class="badge">12 minutes</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="blog.html?cat=Recovery" class="card bg-base-100 shadow-xl h-full">
+                <div class="card-body">
+                  <h3 class="card-title">Recovery</h3>
+                  <p>Sleep, rest days, and the boring habits that make PRs possible.</p>
+                  <div class="badge badge-outline">Sleep</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="programs-pagination" class="swiper-pagination !relative !mt-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-black mb-8">Latest from the journal</h2>
+      <div id="latest-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-4 pb-8">
+      <div id="quotes-swiper" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card bg-base-200">
+              <div class="card-body items-center text-center">
+                <p class="text-xl italic">“I stopped chasing soreness and started chasing clean sets. My back squat went up 20 kilos in a training block.”</p>
+                <p class="opacity-70">— Alex, reader in Lisbon</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card bg-base-200">
+              <div class="card-body items-center text-center">
+                <p class="text-xl italic">“The 5K plan did not make me a hero. It made me a person who runs on Tuesdays. That was the whole point.”</p>
+                <p class="opacity-70">— Sam, first 5K</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card bg-base-200">
+              <div class="card-body items-center text-center">
+                <p class="text-xl italic">“Protein plates beat another smoothie recipe. I cook the same four dinners and I am leaner than last winter.”</p>
+                <p class="opacity-70">— Riley, night-shift nurse</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="quotes-pagination" class="swiper-pagination !relative !mt-6"></div>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 py-12">
+      <div class="card bg-primary text-primary-content">
+        <div class="card-body items-center text-center">
+          <h2 class="card-title text-3xl">Sunday notes in your inbox</h2>
+          <p>One article, one cue, no product dump. Unsubscribe whenever you want.</p>
+          <form id="newsletter-form" class="join w-full max-w-md mt-2">
+            <input type="email" class="input input-bordered join-item w-full text-base-content" placeholder="you@email.com" required />
+            <button class="btn join-item bg-neutral text-neutral-content border-0" type="submit">Join</button>
+          </form>
+          <p data-success class="hidden font-semibold">You are on the list.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
